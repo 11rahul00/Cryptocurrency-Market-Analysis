@@ -1,3 +1,5 @@
+🚀 Cryptocurrencies Market Analysis 
+🔍 Historical Market Capitalization & Volatility Analysis Using Python & Pandas
 
 ## 📚 About the Project
 

@@ -177,12 +177,4 @@ plt.bar(range(len(values)), values, tick_label=LABELS)
 * Use modern APIs (e.g., CoinGecko) for up-to-date analysis
 * Interactive dashboard using **Plotly** or **Streamlit**
 
----
 
-Would you like this turned into:
-
-* 📓 A ready-to-run `.ipynb` notebook?
-* 🌐 An interactive dashboard?
-* 📦 A public GitHub project template?
-
-Let me know and I’ll generate/export it for you.

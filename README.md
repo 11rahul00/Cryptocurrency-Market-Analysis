@@ -158,6 +158,40 @@ values = [
 
 plt.bar(range(len(values)), values, tick_label=LABELS)
 ```
+## 🗄️ SQL Analysis
+
+In addition to the Python-based exploration above, I have also performed **SQL analysis** on the cryptocurrency datasets.  
+The queries are saved in **`crypto_sql_queries.ipynb`**, which can be run to replicate the results.
+
+### 📋 SQL Tables Used
+
+| Table Name         | Column Name          | Data Type       | Description                                 |
+| ------------------ | -------------------- | --------------- | ------------------------------------------- |
+| `cmc2017`          | `id`                 | VARCHAR         | Unique cryptocurrency identifier            |
+|                    | `name`               | VARCHAR         | Name of the cryptocurrency                  |
+|                    | `symbol`             | VARCHAR(10)     | Trading symbol (e.g., BTC, ETH)             |
+|                    | `rank`               | INT             | Market cap rank                             |
+|                    | `market_cap_usd`     | DECIMAL(20,2)   | Market capitalization in USD                |
+|                    | `24h_volume_usd`     | DECIMAL(20,2)   | Trading volume in USD over last 24 hours    |
+|                    | `percent_change_24h` | DECIMAL(10,2)   | % price change in the last 24 hours         |
+|                    | `percent_change_7d`  | DECIMAL(10,2)   | % price change in the last 7 days           |
+| `cmc2018`          | Same columns as `cmc2017` | —         | —                                           |
+| `daily_crypto_data`| `symbol`             | VARCHAR(10)     | Trading symbol                              |
+|                    | `date`               | DATE            | Record date                                 |
+|                    | `24h_volume_usd`     | DECIMAL(20,2)   | Trading volume in USD over last 24 hours    |
+
+---
+
+### 🔍 SQL Query List
+
+Below are some of the queries performed in `crypto_sql_queries.ipynb`:
+
+#### 🔹 Q1: Top 10 Coins by Market Cap (2017)
+```sql
+SELECT name, market_cap_usd
+FROM cmc2017
+ORDER BY market_cap_usd DESC
+LIMIT 10;
 
 ---
 

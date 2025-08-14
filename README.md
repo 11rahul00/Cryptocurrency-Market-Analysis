@@ -184,14 +184,25 @@ The queries are saved in **`crypto_sql_queries.ipynb`**, which can be run to rep
 
 ### 🔍 SQL Query List
 
-Below are some of the queries performed in `crypto_sql_queries.ipynb`:
-
-#### 🔹 Q1: Top 10 Coins by Market Cap (2017)
-```sql
-SELECT name, market_cap_usd
-FROM cmc2017
-ORDER BY market_cap_usd DESC
-LIMIT 10;
+1. Top 10 Coins by Market Cap (2017)  
+2. Top 10 Coins by Market Cap (2018)  
+3. Coins with Over 50% Weekly Growth (2018)  
+4. Count of Coins Missing Market Cap (2017)  
+5. Market Cap Share of Top 10 vs Rest (2018)  
+6. Rank Coins by 24h Volume (2018)  
+7. Total Market Cap by Symbol (2018)  
+8. Biggest Gainers (24h) – 2018  
+9. Biggest Losers (7d) – 2018  
+10. Year-over-Year Market Cap Growth (Only Coins in Both Years)  
+11. Largest YoY Increase in 24h Volume  
+12. Coins Entered Top 20 in 2018 but not in 2017  
+13. Coins Dropped from Top 20 in 2018  
+14. Moving Average of 7-Day Returns (2018)  
+15. Median 7-Day Return by Year  
+16. Top 5 Coins by Volatility (STDDEV of 24h % Change)  
+17. Correlation between Market Cap and Volume by Cap Category  
+18. Ranking Coins by Average Weekly Return (2018)  
+19. Clusters of Coins with Similar Weekly Returns (Diff ≤ 10%)  
 
 ---
 
